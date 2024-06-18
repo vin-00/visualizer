@@ -1,0 +1,9 @@
+.learnMore:hover{
+    opacity:1;
+    background-color: #ffffff0f;
+    border-radius: 10px;
+}
+
+:root::-webkit-scrollbar{
+    display: none;
+}

@@ -1,0 +1,49 @@
+
+.cell{
+    width: 30px;
+    height: 30px;
+    margin:1px;
+    border-radius: 10px;
+    border: 2px solid black;
+    text-align: center;
+}
+
+.error{
+    background-color: red;
+    color:white;
+}
+
+.board{
+    margin: auto;
+    margin-top: 40px;
+}
+
+.left{
+    margin-left: 10px;
+}
+
+.down{
+    margin-top: 10px;
+}
+
+input[type=number]::-webkit-outer-spin-button,
+input[type=number]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+@media (max-width:400px){
+    .cell{
+        width: 25px;
+        height: 25px;
+    }
+     /* .board{
+        width: fit-content;
+     } */
+}
+
+@media (max-width:320px){
+    .cell{
+        width: 20px;
+    }
+}
