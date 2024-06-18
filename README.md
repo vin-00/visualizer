@@ -1,2 +1,2 @@
 # Visualizer
-(Website)[https://visualize-11.netlify.app/]
+[Website](https://visualize-11.netlify.app/)
