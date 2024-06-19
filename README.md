@@ -56,5 +56,4 @@ The Tower of Hanoi puzzle involves moving a stack of disks from one rod to anoth
   - Pause and resume the visualization at any moment.
 
 ---
-### Thank you for using Visualize! We hope you enjoy exploring and solving puzzles with my application. If you have any questions or feedback, please feel free to reach out on my gmail
-winkhatri292004@gmail.com
+### Thank you for using Visualize! I hope you enjoy exploring and solving puzzles with my application. If you have any questions or feedback, please feel free to reach out on my gmail winkhatri292004@gmail.com
