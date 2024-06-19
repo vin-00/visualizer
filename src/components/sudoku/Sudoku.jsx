@@ -30,6 +30,7 @@ export default function Sudoku(){
                                         ['',1,'','','','',7,'',8],]);
     
     function handleInput(i,j,event){
+        console.log(sudoku);
         let x = event.target.value;
        
         if((x>=1 && x<=9) || (x=="")){
@@ -43,6 +44,52 @@ export default function Sudoku(){
        
         let startBtn = document.getElementById('start');
         if(start.current==false){
+
+            let check = false;
+            outer :for(let i=0 ; i<9 ; i++){
+                for(let j=0 ; j<9 ; j++){
+                    
+
+                    let d = sudoku[i][j];
+                    
+                    if(d==''){
+                        continue;
+                    }
+                    for(let c=0 ; c<9 ; c++){
+                        if(c!=j && sudoku[i][c]==d){
+                            check = true;
+                            break outer;
+                        }
+                    }
+
+                    for(let r=0 ; r<9 ; r++){
+                        if(r!=i && sudoku[r][j]==d){
+                            check =true;
+                            break outer;
+                        }
+                    }
+
+                    let sr = (Math.floor(i/3))*3;
+                    let sc = (Math.floor(j/3))*3;
+                    for(let r=sr ; r<sr+3 ; r++){
+                        for(let c=sc ; c<sc+3 ; c++){
+                            if(i!=r && j!=c && sudoku[r][c]==d){
+                                check = true;
+                                break outer;
+                            }
+                        }
+                    }
+                }
+            }
+
+            if(check == true){
+                startBtn.innerText = 'Provide Valid Sudoku';
+                setTimeout(()=>{
+                    startBtn.innerText = 'Start';
+                },2000)
+                return;
+            }
+
             start.current = true;
             startBtn.innerText = 'Pause'
             let res = await sudokuSolve(0,0);
