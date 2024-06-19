@@ -44,7 +44,7 @@ function Navbar({algo , setAlgo , setLearn}) {
 
           <Box>
                 <FormControl sx={{ m:3 }}>
-                    <InputLabel id="algo" sx={{color:'white'}}>Algorithm</InputLabel>
+                    <InputLabel id="algo" sx={{color:'white'}}>Visualize</InputLabel>
                     <Select
                     labelId="algo"
                     value={algo}
